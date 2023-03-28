@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+
+<body>
+
+    <div class="heading" >
+        <h1>UNIT CONVERTER</h1>
+    </div>
+
+    <div class="box">
+
+        <div class="choice">
+            <a href="index.html">Convert Length</a>
+            <a href="areaConverter.html">Convert Area</a>
+        </div>
+
+
+        <h1 class="main" >Area Converter</h1>
+
+        <div class="input">
+            <h3>Meter Square</h3>
+            <input type="text" placeholder="Input in Meter" id="input">
+            <button onclick="cal()" >Convert</button>
+        </div>
+
+        <div class="out1">
+            <h3>Square feet</h3>
+            <p id="out1" > Area in Square Feet </p>
+        </div>
+
+        <div class="out2">
+            <h3>Square Centimeter</h3>
+            <p id="out2" > Area in Square Centimeter </p>
+        </div>
+
+        <div class="out3">
+            <h3>Acre</h3>
+            <p id="out3" > Area in Acer </p>
+        </div>
+
+    </div>
+
+    <script>
+        const cal = () => {
+            var inpt = document.getElementById("input").value;
+            console.log(inpt);
+
+            var out1 = inpt*10.764;
+            var out1 = out1.toFixed(3);
+            document.getElementById("out1").innerHTML = out1 + " sq feet";
+
+            var out2 = inpt*10000;
+            var out2 = out2.toFixed(3);
+            document.getElementById("out2").innerHTML = out2+ " sq cm";
+
+            var out3 = inpt/4047;
+            var out3 = out3.toFixed(3);
+            document.getElementById("out3").innerHTML = out3 + " acer";
+        }
+    </script>
+
+</body>
+
+</html>

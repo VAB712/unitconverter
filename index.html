@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+
+<body>
+
+    <div class="heading" >
+        <h1>UNIT CONVERTER</h1>
+    </div>
+
+    <div class="box">
+
+        <div class="choice">
+            <a href="index.html">Convert Length</a>
+            <a href="areaConverter.html">Convert Area</a>
+        </div>
+
+
+        <h1 class="main" >Length Converter</h1>
+
+        <div class="input">
+            <h3>Meter</h3>
+            <input type="text" placeholder="Input in Meter" id="input">
+            <button onclick="cal()">Convert</button>
+        </div>
+
+        <div class="out1">
+            <h3>Kilometer</h3>
+            <p id="out1"> Length in Kilometer </p>
+        </div>
+
+        <div class="out2">
+            <h3>Centimeter</h3>
+            <p id="out2"> Length in Centimeter </p>
+        </div>
+
+    </div>
+
+    <script>
+        const cal = () => {
+            var inpt = document.getElementById("input").value;
+            console.log(inpt);
+            document.getElementById("out1").innerHTML = inpt / 1000 + " km";
+            document.getElementById("out2").innerHTML = inpt * 100 + " cm";
+        }
+    </script>
+
+</body>
+
+</html>
